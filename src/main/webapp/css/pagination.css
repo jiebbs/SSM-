@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.pageList {
+	position:relative;
+	display: block;
+	white-space: nowrap;
+	width:90%;
+	margin: 0 auto;
+}
+
+.pageList li {
+	margin:8px;
+	color:white;
+	display: inline-block;
+}
+.page_active{
+	margin:5px;
+	color:white;
+	text-decoration:underline;
+	display: inline-block;
+}
+
+.pageList>li[class*="page"]{
+	cursor: pointer;
+}

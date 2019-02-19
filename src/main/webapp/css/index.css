@@ -1,0 +1,145 @@
+@charset "UTF-8";
+.indexHeadContainer{
+	position: relative;
+}
+.messageFormContainer{
+	height:500px;
+	z-index: 1px;
+}
+
+.indexMainTitleContainer{
+	position: relative;
+	top:5%;
+}
+
+.indexMainTitleBox{
+	position: relative;
+	left:5%;
+	top:10%;
+}
+
+
+.indexMainTitleBox span{
+	color:white;
+	font-size: 75px;
+}
+
+.indexBodyContainer{
+	position: relative;
+	top:20%;
+	height:100px;
+}
+.indexFooterContainer{
+	position: relative;
+	height:50px;
+	color:white;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.functionContainer{
+	position: relative;
+	height:50px;
+}
+
+.function_button_group{
+	position: absolute;
+	right:100px;
+}
+.function_button_group>button{
+	height:35px;
+	width:100px;
+	font-size: 20px;
+	font-family: monospace;
+}
+
+.addMessageContainer{
+	position:fixed;
+	top:35%;
+	left:370px;
+	height:500px;
+	text-align: center;
+	display: none;
+	z-index: 51;
+}
+.button_group{
+	position: relative;
+	text-align: right;
+}
+.addMessage_close_button{
+	position: relative;
+	right:10px;
+	cursor: pointer;
+}
+
+.reviewBox{
+	position:relative;
+	top:40px;
+	margin: 0 auto;
+}
+.reviewHeader{
+	position: absolute;
+	top:30px;
+	
+}
+
+.reviewContainer{
+	position:relative;
+	margin: 0 auto;
+	bottom:50px;
+	text-align: center;
+	background-color:white;
+	z-index: 50;
+	border-style:solid;
+	border-width:2px;
+	border-color:#5f79cc;
+	width:1200px;
+	height:450px;
+	opacity: 0.95;
+}
+
+.reviewTitle{
+	font-size: 20px;
+	font-family: monospace;
+}
+.reviewTheme>input[id='title']{
+	position:relative;
+	top:5px;
+	height:30px;
+	width:1000px;
+	font-size: 16px;
+	opacity: 0.85;
+}
+.reviewBody{
+	position:relative;
+	top:15px;
+	height:300px;
+}
+
+.reviewContent{
+	position: relative;
+	top:10px;	
+}
+
+.reviewContent>textarea[id='content']{
+	width:1000px;
+	font-size:16px;
+	opacity: 0.85;
+}
+
+.reviewfooter{
+	height:50px;
+	position: relative;
+	text-align: right;
+	right:100px;
+}
+.submit_button_group>button{
+	height:40px;
+	width:100px;
+	font-size: 14px;
+}
+
+.footerContainer{
+	position:relative;
+	bottom:10px;
+	height:100px;
+}

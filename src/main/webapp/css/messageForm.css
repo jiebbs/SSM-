@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+body {
+	background-image:
+		url("http://localhost:8080/myProject/images/backgroundImg2.jpg");
+}
+
+.formTable {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.tableContainer {
+	text-align: center;
+}
+
+.formTable {
+	position: relative;
+	margin: 0 auto;
+	background-color: white;
+	opacity: 0.85;
+}
+
+.formTable th {
+	font-size: 20px;
+}
+
+.formTable th, td {
+	border: solid 1px;
+	text-align: center;
+	height: 35px;
+}
+
+.titleRow>th[class="NO"] {
+	width: 100px;
+}
+
+.titleRow>th[class="title"] {
+	width: 280px;
+}
+
+.titleRow>th[class="content"] {
+	width: 350px;
+}
+
+.titleRow>th[class="author"] {
+	width: 150px;
+}
+
+.titleRow>th[class="create-date"] {
+	width: 200px;
+}
+
+.titleRow>th[class="update-date"] {
+	width: 200px;
+}
+
+.titleRow>th[class="review-count"] {
+	width: 100px;
+}
+
+.titleRow>th[class="operation"] {
+	width: 400px;
+}
+
+.pageContainer{
+	position: relative;
+	top:50px;
+	height:100px;
+	width:100%;
+	text-align:right;
+}

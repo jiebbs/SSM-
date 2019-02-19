@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+    <!-- 别名定义 -->
+    <typeAliases>
+        <package name="com.jiebbs.ssm.pojo" />
+    </typeAliases>
+    <mappers>
+    	<mapper resource="mappers/MessageMapper.xml"/>
+    	<mapper resource="mappers/ReviewMapper.xml"/>
+    	<mapper resource="mappers/UserMapper.xml"/>
+    </mappers>
+</configuration>

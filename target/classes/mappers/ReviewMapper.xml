@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiebbs.ssm.dao.ReviewMapper">
+  <resultMap id="BaseResultMap" type="com.jiebbs.ssm.pojo.Review">
+    <constructor>
+      <idArg column="id"  javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="mid"  javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="uid"  javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="review_level" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="reviewUsername"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="review_content"  javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="create_date"  javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="last_update_date"  javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="messageOrReviewContent"  javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <resultMap id="myResultMap" type="com.jiebbs.ssm.pojo.Review">
+  	  <id column="id" property="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <result column="mid" property="mid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <result column="uid" property="uid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <result column="review_level" property="reviewLevel" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <result column="review_username" property="reviewUsername" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="review_content" property="reviewContent" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="create_date" property="createDate" javaType="java.util.Date" jdbcType="DATE" />
+      <result column="last_update_date" property="lastUpdateDate" javaType="java.util.Date" jdbcType="DATE" />
+      <result column="messageOrReviewContent" property="messageOrReviewContent" javaType="java.lang.String" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, mid, uid, review_level,review_username, review_content, create_date, last_update_date,messageOrReviewContent
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_review
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_review
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jiebbs.ssm.pojo.Review">
+    insert into t_review (id, mid, uid, 
+      review_level,review_username, review_content, create_date, 
+      last_update_date,messageOrReviewContent)
+    values (#{id,jdbcType=INTEGER}, #{mid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, 
+      #{reviewLevel,jdbcType=INTEGER},#{reviewUsername,jdbcType=VARCHAR}, #{reviewContent,jdbcType=VARCHAR}, now(), 
+      now(),#{messageOrReviewContent,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jiebbs.ssm.pojo.Review">
+    insert into t_review
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="reviewLevel != null">
+        review_level,
+      </if>
+      <if test="reviewUsername !=null">
+      	review_username,
+      </if>
+      <if test="reviewContent != null">
+        review_content,
+      </if>
+        create_date,
+ 
+        last_update_date,
+      <if test="messageOrReviewContent != null">
+        messageOrReviewContent,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="reviewLevel != null">
+        #{reviewLevel,jdbcType=INTEGER},
+      </if>
+      <if test="reviewUsername !=null">
+      	#{reviewUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewContent != null">
+        #{reviewContent,jdbcType=VARCHAR},
+      </if>
+      	now(),
+      	now(),
+      <if test="messageOrReviewContent != null">
+        #{messageOrReviewContent,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jiebbs.ssm.pojo.Review">
+    update t_review
+    <set>
+      <if test="mid != null">
+        mid = #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="reviewLevel != null">
+        review_level = #{reviewLevel,jdbcType=INTEGER},
+      </if>
+       <if test="reviewUsername !=null">
+      	review_username = #{reviewUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewContent != null">
+        review_content = #{reviewContent,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=DATE},
+      </if>
+      
+        last_update_date = now(),
+      <if test="messageOrReviewContent != null">
+		messageOrReviewContent = #{messageOrReviewContent,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jiebbs.ssm.pojo.Review">
+    update t_review
+    set mid = #{mid,jdbcType=INTEGER},
+      uid = #{uid,jdbcType=INTEGER},
+      review_level = #{reviewLevel,jdbcType=INTEGER},
+      review_username = #{reviewUsername,jdbcType=VARCHAR},
+      review_content = #{reviewContent,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=DATE},
+      last_update_date = now(),
+      messageOrReviewContent = #{messageOrReviewContent,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="getReviews" parameterType="map" resultMap="myResultMap">
+  	select
+  	<include refid="Base_Column_List"/>
+  	from t_review
+  	where mid= #{mid}
+  	limit ${pageSize} offset ${messageRow};
+  </select>
+  
+  <select id="selectTotalRecordByMid" parameterType="Integer" resultType="Integer">
+  	select
+  	count(1)
+  	from t_review
+  	where mid= #{mid}
+  </select>
+</mapper>

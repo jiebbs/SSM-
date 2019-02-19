@@ -1,0 +1,295 @@
+@charset "UTF-8";
+.indexHeadContainer{
+	position: relative;
+}
+
+body {
+	background-image:
+		url("http://localhost:8080/myProject/images/backgroundImg2.jpg");
+}
+
+
+/*
+返回主页按钮样式
+*/
+.functionContainer{
+	position: relative;
+	width:50%;
+}
+.functionBox{
+	position: relative;
+	display: inline-block;
+	left:30%;
+}
+
+.function_button_group button{
+	width:100px;
+	height:35px;
+	font-size: 18px;
+}
+
+/**
+详情页标题
+*/
+
+.indexMainTitleContainer{
+	position: relative;
+	top:50px;
+	left:10%;
+}
+
+.indexMainTitleBox{
+	position: relative;
+	left:5%;
+	top:10%;
+}
+
+
+.indexMainTitleBox span{
+	color:white;
+	font-size: 75px;
+}
+
+
+/*
+	留言样式
+*/
+.dividing_line_container{
+	position: relative;
+	top:35px;
+	width: 100%;
+	text-align: center;
+}
+.dividing_line_box{
+	position: relative;
+	width:72%;
+	margin: 0 auto;
+}
+
+.dividing_line_box HR{
+	border: boder 2px #b1c7fc;
+	opacity: 0.85px;
+}
+
+
+.messageDetailContainer{
+	position: relative;
+	top:200px;
+	width:100%;
+	height:auto;
+}
+
+.messageDetailBox{
+	position: relative;
+	top:10px;
+	width:100%;
+	text-align: center;
+}
+
+.userInfoBox{
+	display: inline-block;
+	position:relative;
+	margin:0 auto;
+	height:350px;
+	width:12%;
+	background-color: white;
+	opacity: 0.95;
+	border: solid 2px #b1c7fc;
+	vertical-align: top;
+}
+
+
+.mesgInfoBox{
+	display: inline-block;
+	position:relative;
+	margin:0 auto;
+	height:350px;
+	width:60%;
+	background-color: white;
+	opacity: 0.95;
+	border: solid 2px #b1c7fc;
+	vertical-align: top;
+	text-align: left;
+}
+
+.userInfo_username{
+	position: relative;
+	top:30px;
+	display: block;
+}
+
+.messageInfo_createDate{
+	position: relative;
+	top:130px;
+	display: block;
+}
+
+.messageInfo_updateDate{
+	position: relative;
+	top:150px;
+	display: block;
+}
+
+.messageInfo_title{
+	position: relative;
+	top:30px;
+	left:30px;
+}
+
+.messageInfo_content{
+	position: relative;
+	top:50px;
+	left:30px;
+}
+
+.function_box{
+	position: relative;
+	width:100%;
+	text-align: right;
+}
+
+.review_button{
+	position: relative;
+	margin: 0 auto;
+	right:30px;
+	top:5px;
+}
+
+.line_style{
+	position: relative;
+	top:30px;
+}
+
+.line_style HR{
+	border: dashed 2px #b1c7fc;
+	opacity: 0.85px;
+}
+
+.reviewMessageContainer{
+	position: fixed;
+	top:35%;
+	left:18%;
+	text-align: center;
+	display:none;
+	z-index: 51;
+}
+
+/*分页样式*/
+.pageContainer{
+	position: relative;
+	top:40px;
+	height:auto;
+	width:100%;
+	text-align: center;
+}
+
+/* 回复样式 */
+.reviewDetailBox{
+	position: relative;
+	height:auto;
+	top:50px;
+	text-align: center;
+}
+
+
+.review_userInfoBox{
+	display: inline-block;
+	position:relative;
+	margin:0 auto;
+	height:350px;
+	width:12%;
+	background-color: white;
+	opacity: 0.95;
+	border: solid 2px #b1c7fc;
+	vertical-align: top;
+}
+
+.review_floor{
+	position: relative;
+	top:10px;
+}
+
+.review_mesgInfoBox{
+	display: inline-block;
+	position:relative;
+	margin:0 auto;
+	height:350px;
+	width:60%;
+	background-color: white;
+	opacity: 0.95;
+	border: solid 2px #b1c7fc;
+	vertical-align: top;
+	text-align: left;
+}
+
+.review_userInfo_username{
+	position: relative;
+	top:30px;
+	display: block;
+}
+
+.review_messageInfo_createDate{
+	position: relative;
+	top:120px;
+	display: block;
+}
+
+.review_messageInfo_updateDate{
+	position: relative;
+	top:140px;
+	display: block;
+}
+
+.review_messageInfo_messageOrReviewContent{
+	position: relative;
+	width:50%;
+	height:50px;
+	top:20px;
+	left:30px;
+	overflow:auto;
+}
+
+.review_messageInfo_content{
+	position: relative;
+	top:100px;
+	left:30px;
+}
+
+.review_function_box{
+	position: relative;
+	width:100%;
+	top:30px;
+	text-align: right;
+}
+
+.review_review_button{
+	position: relative;
+	margin: 0 auto;
+	right:30px;
+	top:5px;
+}
+
+.review_line_style{
+	position: relative;
+	top:50px;
+}
+
+.review_line_style HR{
+	border: dashed 2px #b1c7fc;
+	opacity: 0.85px;
+}
+
+div[class$=review_box]{
+	position: relative;
+	margin-top:10px;
+	margin-bottom: 25px;
+}
+
+/*网页底部样式*/
+.messageDetail_footter{
+	position: relative;
+	height:50px;
+	top:75px;
+	text-align: center;
+	color:white;
+}

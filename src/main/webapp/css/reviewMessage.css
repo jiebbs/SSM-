@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.reviewContainer{
+	position:absolute;
+	height:500px;
+	margin:0 auto;
+	text-align: center;
+	z-index: 50px;
+}
+.button_group{
+	position: relative;
+	text-align: right;
+}
+.review_close_button{
+	position: relative;
+	right:10px;
+	cursor: pointer;
+}
+
+.reviewBox{
+	position:relative;
+	top:10px;
+	margin: 0 auto;
+}
+.reviewHeader{
+	position: absolute;
+}
+
+.reviewContainer{
+	position:relative;
+	margin: 0 auto;
+	bottom:50px;
+	text-align: center;
+	background-color:white;
+	z-index: 50;
+	border-style:solid;
+	border-width:2px;
+	border-color:#5f79cc;
+	width:1200px;
+	height:450px;
+	opacity: 0.95;
+}
+
+.reviewTitle{
+	font-size: 20px;
+	font-family: monospace;
+}
+
+.reviewBody{
+	position:relative;
+	top:15px;
+	height:300px;
+}
+
+.reviewContent{
+	position: relative;
+	top:10px;	
+}
+
+.reviewContent>textarea[id='content']{
+	width:1000px;
+	font-size:16px;
+	opacity: 0.85;
+}
+
+.reviewfooter{
+	height:50px;
+	position: relative;
+	top:30px;
+	text-align: right;
+	right:100px;
+}
+.submit_button_group>button{
+	height:40px;
+	width:100px;
+	font-size: 14px;
+}
+
+.message_show_box{
+	border: dashed 2px #b1c7fc;
+	height:100px;
+	width:1000px;
+	margin: 0 auto;
+	overflow: scroll;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.showBox_title{
+	
+}
+
+.showBox_Content{
+	
+}

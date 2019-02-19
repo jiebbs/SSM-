@@ -1,0 +1,24 @@
+1、用户表
+(1）id int(11) auto_increment primary key comment '用户ID'
+(2) username varchar(20) default'新用户' comment '用户名称'
+(3) password varchar(20) comment '用户密码'
+(4) role int(11) comment '用户角色'
+(5) reg_date date comment '用户注册日期' 
+(6)	update_date date comment '用户信息最后一次更新日期'
+ 
+ 2、留言表
+(1）id int(11) auto_increment primary key comment '留言ID'
+(2) uid int(11) comment '用户ID'
+(3) title varchar(50) comment '用户留言标题'
+(4) content varchar(255) comment '留言内容' 
+(5) create_date date comment '留言日期'
+(6) last_update_date date comment '留言更新日期'
+
+3、回复表
+(1) id int(11) auto_increment primary key comment '回复ID'
+(2) mid int(11) comment '回复文章的ID'
+(3) uid int(11) comment '回复人的ID'
+(4) review_level int(11) default 0 comment '回复的等级'
+(5) review_content(255) comment '回复内容'
+(6) create_date date comment '回复时间'
+(7) last_update_date date comment '回复的更新日期'
